@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "HgA1C_Test_bun",
+  "id": "HbA1C_Test_bun",
   "type": "transaction",
   "entry": [
     {
@@ -87,10 +87,10 @@
             {
               "system": "http://loinc.org",
               "code": "4548-4",
-              "display": "HgA1C"
+              "display": "HbA1C"
             }
           ],
-          "text": "HgA1C Laboratory test"
+          "text": "HbA1C Laboratory test"
         },
         "effectiveDateTime": "2025-06-05T16:00:00.000+00:00",
         "subject": {
