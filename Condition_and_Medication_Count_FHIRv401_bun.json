@@ -1,0 +1,99 @@
+{
+    "resourceType": "Bundle",
+    "id": "xxxx",
+    "type": "transaction",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:5c41cecf-cf81-434f-9da7-e24e5a99dbc2",
+            "resource": {
+                "resourceType": "Patient",
+                "id": "5c41cecf-cf81-434f-9da7-e24e5a99dbc2",
+                "name": [
+                    {
+                        "text": "Plusone Actually Male",
+                        "family": "Plusone",
+                        "given": [
+                            "Actually Male"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1956-10-14"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Patient/5c41cecf-cf81-434f-9da7-e24e5a99dbc2"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:5c41cecf-cf71-434f-9da7-e24e5a99dbc2",
+            "resource": {
+                "resourceType": "MedicationRequest",
+                "id": "5c41cecf-cf71-434f-9da7-e24e5a99dbc2",
+                "status": "active",
+                "intent": "order",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                            "code": "1049593",
+                            "display": "12 HR Oxycodone Hydrochloride 60 MG Extended Release Oral Tablet"
+                        }
+                    ],
+                    "text": "12 HR Oxycodone Hydrochloride 60 MG Extended Release Oral Tablet"
+                },
+                "subject": {
+                    "reference": "Patient/5c41cecf-cf81-434f-9da7-e24e5a99dbc2"
+                },
+                "authoredOn": "2019-04-15T16:02:00.000+00:00"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "MedicationRequest/5c41cecf-cf71-434f-9da7-e24e5a99dbc2"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:5c42cecf-cf81-434f-9da7-e24e5a99dbc2",
+            "resource": {
+                "resourceType": "Condition",
+                "id": "5c42cecf-cf81-434f-9da7-e24e5a99dbc2",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "203082005",
+                            "display": "Fibromyalgia (disorder)"
+                        }
+                    ],
+                    "text": "Fibromyalgia (disorder)"
+                },
+                "clinicalStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "code": "active",
+                            "display": "Active"
+                        }
+                    ]
+                },
+                "verificationStatus": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                            "code": "confirmed"
+                        }
+                    ]
+                },
+                "onsetDateTime": "2013-04-05T16:00:00.000+00:00",
+                "subject": {
+                    "reference": "Patient/5c41cecf-cf81-434f-9da7-e24e5a99dbc2"
+                },
+                "recordedDate": "2013-04-05"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Condition/5c42cecf-cf81-434f-9da7-e24e5a99dbc2"
+            }
+        }
+    ]
+}

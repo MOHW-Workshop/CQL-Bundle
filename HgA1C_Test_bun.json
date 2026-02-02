@@ -1,0 +1,106 @@
+{
+  "resourceType": "Bundle",
+  "id": "HgA1C_Test_bun",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:A12345678",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "A12345678",
+        "name": [
+          {
+            "text": "Marry",
+            "given": [
+              "Marry"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1966-10-14"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/A12345678"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:C12345678",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "C12345678",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "203082005",
+              "display": "Fibromyalgia (disorder)"
+            }
+          ],
+          "text": "Fibromyalgia (disorder)"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "onsetDateTime": "2013-04-05T16:00:00.000+00:00",
+        "subject": {
+          "reference": "Patient/A12345678"
+        },
+        "recordedDate": "2013-04-05"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/C12345678"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:M12345678",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "M12345678",
+        "status": "active",
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/A12345678"
+        },
+        "authoredOn": "2019-04-15T16:02:00.000+00:00"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/M12345678"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:O12345678",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "O12345678",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HgA1C"
+            }
+          ],
+          "text": "HgA1C Laboratory test"
+        },
+        "effectiveDateTime": "2025-06-05T16:00:00.000+00:00",
+        "subject": {
+          "reference": "Patient/A12345678"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/O12345678"
+      }
+    }
+  ]
+}
